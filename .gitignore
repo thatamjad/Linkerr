@@ -1,8 +1,10 @@
-# Documentation and text files - INCLUDE ALL
+# Documentation and text files - EXCLUDE ALL except README.md
 *.md
 *.txt
 *.MD
 *.TXT
+# Allow only README.md
+!README.md
 
 # Dependencies
 node_modules/
