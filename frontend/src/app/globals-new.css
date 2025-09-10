@@ -1,0 +1,102 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Modern Design System Variables */
+:root {
+  /* Light Theme Variables */
+  --background: 0 0% 100%;            /* Pure white background */
+  --foreground: 222 84% 4.9%;         /* Deep dark text */
+  
+  /* Surface Colors */
+  --surface: 0 0% 100%;               /* Pure white surfaces */
+  --surface-muted: 210 40% 98%;       /* Very light gray */
+  --surface-elevated: 0 0% 100%;      /* Elevated surfaces */
+  
+  /* Brand Colors */
+  --primary: 221 83% 53%;             /* Modern blue */
+  --primary-foreground: 210 40% 98%;  /* Light text on primary */
+  
+  --secondary: 210 40% 96%;           /* Light secondary */
+  --secondary-foreground: 222 84% 4.9%; /* Dark text on secondary */
+  
+  --accent: 262 83% 58%;              /* Purple accent */
+  --accent-foreground: 210 40% 98%;   /* Light text on accent */
+  
+  /* Semantic Colors */
+  --muted: 210 40% 96%;               /* Muted backgrounds */
+  --muted-foreground: 215 16% 47%;    /* Muted text */
+  
+  --destructive: 0 84% 60%;           /* Red for errors */
+  --destructive-foreground: 210 40% 98%; /* Light text on red */
+  
+  /* Borders and Inputs */
+  --border: 214 32% 91%;              /* Light borders */
+  --input: 214 32% 91%;               /* Input backgrounds */
+  --ring: 221 83% 53%;                /* Focus rings */
+}
+
+/* Modern Dark Theme */
+.dark {
+  --background: 222 84% 4.9%;         /* Deep dark background */
+  --foreground: 210 40% 98%;          /* Light text */
+  
+  /* Dark Surface Colors */
+  --surface: 217 33% 17%;             /* Dark surfaces */
+  --surface-muted: 215 25% 27%;       /* Lighter dark surfaces */
+  --surface-elevated: 217 33% 17%;    /* Card surfaces */
+  
+  /* Dark Brand Colors */
+  --primary: 217 91% 60%;             /* Bright blue */
+  --primary-foreground: 222 84% 4.9%; /* Dark text on primary */
+  
+  --secondary: 217 32% 17%;           /* Dark secondary */
+  --secondary-foreground: 210 40% 98%; /* Light text on secondary */
+  
+  --accent: 270 95% 75%;              /* Bright purple accent */
+  --accent-foreground: 222 84% 4.9%;  /* Dark text on accent */
+  
+  /* Dark Semantic Colors */
+  --muted: 217 32% 17%;               /* Dark muted backgrounds */
+  --muted-foreground: 215 20% 65%;    /* Muted text */
+  
+  --destructive: 0 62% 50%;           /* Dark red for errors */
+  --destructive-foreground: 210 40% 98%; /* Light text on red */
+  
+  /* Dark Borders and Inputs */
+  --border: 215 28% 17%;              /* Dark borders */
+  --input: 215 28% 17%;               /* Dark input backgrounds */
+  --ring: 217 91% 60%;                /* Bright focus rings */
+}
+
+/* Global Styles */
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* Enhanced Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+/* Utility Classes */
+.text-gradient {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .gradient-text {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

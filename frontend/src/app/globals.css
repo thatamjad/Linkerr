@@ -1,0 +1,267 @@
+@import "tailwindcss";
+
+/* Modern Design System Variables */
+:root {
+  /* Light Theme Variables */
+  --background: 0 0% 100%;            /* Pure white background */
+  --foreground: 222 84% 4.9%;         /* Deep dark text */
+  
+  /* Surface Colors */
+  --surface: 0 0% 100%;               /* Pure white surfaces */
+  --surface-muted: 210 40% 98%;       /* Very light gray */
+  --surface-elevated: 0 0% 100%;      /* Elevated surfaces */
+  
+  /* Brand Colors */
+  --primary: 221 83% 53%;             /* Modern blue */
+  --primary-foreground: 210 40% 98%;  /* Light text on primary */
+  
+  --secondary: 210 40% 96%;           /* Light secondary */
+  --secondary-foreground: 222 84% 4.9%; /* Dark text on secondary */
+  
+  --accent: 262 83% 58%;              /* Purple accent */
+  --accent-foreground: 210 40% 98%;   /* Light text on accent */
+  
+  /* Semantic Colors */
+  --muted: 210 40% 96%;               /* Muted backgrounds */
+  --muted-foreground: 215 16% 47%;    /* Muted text */
+  
+  --destructive: 0 84% 60%;           /* Red for errors */
+  --destructive-foreground: 210 40% 98%; /* Light text on red */
+  
+  /* Borders and Inputs */
+  --border: 214 32% 91%;              /* Light borders */
+  --input: 214 32% 91%;               /* Input backgrounds */
+  --ring: 221 83% 53%;                /* Focus rings */
+}
+
+/* Modern Dark Theme - Enhanced */
+.dark {
+  --background: 224 71% 4%;           /* Rich dark background with subtle blue undertone */
+  --foreground: 213 31% 91%;          /* Warm light text */
+  
+  /* Enhanced Dark Surface Colors */
+  --surface: 220 13% 9%;              /* Darker elevated surfaces */
+  --surface-muted: 217 19% 13%;       /* Medium dark surfaces */
+  --surface-elevated: 217 16% 11%;    /* Elevated card surfaces with depth */
+  
+  /* Enhanced Dark Brand Colors */
+  --primary: 213 94% 68%;             /* Vibrant blue with better contrast */
+  --primary-foreground: 224 71% 4%;   /* Dark text on primary */
+  
+  --secondary: 217 19% 13%;           /* Rich dark secondary */
+  --secondary-foreground: 213 31% 91%; /* Light text on secondary */
+  
+  --accent: 270 91% 65%;              /* Rich purple accent */
+  --accent-foreground: 224 71% 4%;    /* Dark text on accent */
+  
+  /* Enhanced Dark Semantic Colors */
+  --muted: 217 19% 13%;               /* Rich muted backgrounds */
+  --muted-foreground: 215 13% 65%;    /* Better contrast muted text */
+  
+  --destructive: 0 72% 51%;           /* Vibrant error red */
+  --destructive-foreground: 213 31% 91%; /* Light text on red */
+  
+  /* Enhanced Dark Borders and Inputs */
+  --border: 217 19% 18%;              /* Subtle visible borders */
+  --input: 217 19% 13%;               /* Input backgrounds with depth */
+  --ring: 213 94% 68%;                /* Bright focus rings */
+  
+  /* Additional Dark Mode Enhancements */
+  --success: 142 69% 58%;             /* Vibrant success green */
+  --warning: 38 92% 50%;              /* Vibrant warning orange */
+  --info: 199 89% 48%;                /* Rich info blue */
+}
+
+/* Global Styles */
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* Enhanced Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+/* Dark Mode Enhancements */
+.dark {
+  /* Enhanced text gradients for dark mode */
+  --text-gradient: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+  
+  /* Glow effects for interactive elements */
+  --glow-primary: 0 0 20px hsl(var(--primary) / 0.3);
+  --glow-accent: 0 0 20px hsl(var(--accent) / 0.3);
+  --glow-success: 0 0 20px hsl(var(--success) / 0.3);
+  --glow-warning: 0 0 20px hsl(var(--warning) / 0.3);
+  --glow-destructive: 0 0 20px hsl(var(--destructive) / 0.3);
+}
+
+/* Enhanced Dark Mode Scrollbars */
+.dark ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 4px;
+  border: 1px solid hsl(var(--background));
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.4);
+  box-shadow: var(--glow-primary);
+}
+
+/* Enhanced Focus Styles for Dark Mode */
+.dark :focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+  box-shadow: var(--glow-primary);
+}
+
+/* Dark Mode Selection */
+.dark ::selection {
+  background: hsl(var(--primary) / 0.3);
+  color: hsl(var(--foreground));
+}
+
+/* Utility Classes */
+.text-gradient {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .text-gradient {
+  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: brightness(1.1);
+}
+
+.dark .gradient-text {
+  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: brightness(1.1);
+}
+
+/* Enhanced Dark Mode Utility Classes */
+.dark .shadow-glow {
+  box-shadow: var(--glow-primary);
+}
+
+.dark .shadow-glow-accent {
+  box-shadow: var(--glow-accent);
+}
+
+.dark .shadow-glow-success {
+  box-shadow: var(--glow-success);
+}
+
+.dark .shadow-glow-warning {
+  box-shadow: var(--glow-warning);
+}
+
+.dark .shadow-glow-destructive {
+  box-shadow: var(--glow-destructive);
+}
+
+/* Enhanced Card Styles for Dark Mode */
+.dark .card-glow:hover {
+  box-shadow: 
+    0 10px 25px -5px hsl(var(--background) / 0.8),
+    0 4px 12px -2px hsl(var(--primary) / 0.2),
+    var(--glow-primary);
+}
+
+.dark .glass-morphism {
+  background: hsl(var(--surface) / 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid hsl(var(--border) / 0.5);
+}
+
+.dark .glass-morphism:hover {
+  background: hsl(var(--surface-elevated) / 0.9);
+  border-color: hsl(var(--primary) / 0.3);
+  box-shadow: var(--glow-primary);
+}
+
+/* Interactive Elements Enhancement */
+.dark .interactive-element:hover {
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+  box-shadow: var(--glow-primary);
+}
+
+/* Responsive Stats Cards - Enhanced */
+.stats-card {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  container-type: inline-size;
+  overflow: hidden; /* Prevent content spillover */
+}
+
+.stats-card-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem; /* Consistent padding */
+}
+
+/* Remove legacy CSS classes that conflict */
+.stats-value {
+  /* Removed clamp and let Tailwind handle sizing */
+  line-height: 1;
+  font-weight: 900;
+}
+
+.stats-title {
+  /* Removed clamp and let Tailwind handle sizing */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.stats-change {
+  /* Removed clamp and let Tailwind handle sizing */
+  white-space: nowrap;
+}
+
+/* Responsive adjustments for better mobile experience */
+@media (max-width: 640px) {
+  .stats-card {
+    min-height: 80px;
+  }
+  
+  .stats-card-content {
+    padding: 0.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .stats-card {
+    min-height: 120px;
+  }
+  
+  .stats-card-content {
+    padding: 1rem 1.5rem;
+  }
+}
