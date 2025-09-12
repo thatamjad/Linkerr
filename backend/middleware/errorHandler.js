@@ -227,7 +227,16 @@ const createErrorResponse = (statusCode, message, details = null) => {
   };
 };
 
+/**
+ * 404 Not Found middleware
+ */
+const notFound = (req, res, next) => {
+  const error = createError(404, `Not Found - ${req.originalUrl}`);
+  next(error);
+};
+
 module.exports = {
+  notFound,
   errorHandler: process.env.NODE_ENV === 'production' ? productionErrorHandler : developmentErrorHandler,
   asyncHandler,
   developmentErrorHandler,
